@@ -101,21 +101,23 @@
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
     
-    .logo{
-      width:45px;
-      height:45px;
-      border-radius:10px;
-      background:#2b6cb0;
-      display:grid;
-      place-items:center;
-      color:white;
-      font-weight:700;
-      font-size:16px;
-      flex-shrink: 0;
-    }
+    .logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  overflow: hidden; /* Important */
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Perfect clean fit */
+}
+
 
     .brand-text h1{
       margin:0;
@@ -1104,7 +1106,10 @@
     <nav id="navbar">
       <div class="nav-inner">
         <div class="logo-container">
-          <div class="logo">VK</div>
+          <div class="logo">
+  <img src="logo.png" alt="Vidya Kendra Logo" />
+</div>
+
           <div class="brand-text">
             <h1>Vidya Kendra Ranchi</h1>
             <p>Nurturing Minds, Building Futures</p>
@@ -1357,21 +1362,21 @@
 
       <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:20px">
         <div class="faculty-card" style="text-align:center">
-          <img src="https://randomuser.me/api/portraits/men/75.jpg" style="width:80px;height:80px;border-radius:12px; object-fit: cover;">
+          <img src="sandeep.png" style="width:80px;height:80px;border-radius:12px; object-fit: cover;">
           <h4 style="margin: 15px 0 5px 0;">R.K. Sharma</h4>
           <small style="color: #666;">Physics – 12+ yrs</small>
         </div>
 
         <div class="faculty-card" style="text-align:center">
-          <img src="https://randomuser.me/api/portraits/women/65.jpg" style="width:80px;height:80px;border-radius:12px; object-fit: cover;">
+          <img src="upkar.png" style="width:80px;height:80px;border-radius:12px; object-fit: cover;">
           <h4 style="margin: 15px 0 5px 0;">Neha Gupta</h4>
           <small style="color: #666;">Chemistry – IITian</small>
         </div>
 
         <div class="faculty-card" style="text-align:center">
-          <img src="https://randomuser.me/api/portraits/men/30.jpg" style="width:80px;height:80px;border-radius:12px; object-fit: cover;">
+          <img src="patratu.png" style="width:80px;height:80px;border-radius:12px; object-fit: cover;">
           <h4 style="margin: 15px 0 5px 0;">Siddharth Verma</h4>
-          <small style="color: #666;">Maths – PhD</small>
+          <small style="color: #666;">Maths 5+ years</small>
         </div>
       </div>
     </section>
@@ -1583,10 +1588,10 @@
       <h2 class="section-heading">Gallery</h2>
 
       <div style="display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:20px" class="gallery">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" />
+        <img src="patratu.png" />
         <img src="https://images.unsplash.com/photo-1535905551471-02819b5b4ae9" />
         <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" />
-        <img src="https://images.unsplash.com/photo-1550488095-3db9b0c3f3ed" />
+        <img src="sandeep.png" />
       </div>
     </section>
 
@@ -1765,14 +1770,14 @@
 
   // WhatsApp open function
   function openWhatsApp(){
-    const phone = '919876543210';
+    const phone = '918217232511';
     const text = encodeURIComponent('Hello Vidya Kendra, I want course details.');
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   }
 
   // Call function
   function openCall(){
-    window.location.href = 'tel:9876543210';
+    window.location.href = 'tel:8217232511';
   }
 
   // Quick Enroll → opens email client
